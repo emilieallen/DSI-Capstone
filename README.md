@@ -20,7 +20,7 @@ Findings and overall performance of the best model will be discussed and analyse
 
 Table of contents:
 
-[TOC]
+[toc]
 
 
 
