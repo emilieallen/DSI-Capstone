@@ -19,18 +19,18 @@ Findings and overall performance of the best model will be discussed and analyse
 ------
 
 Table of contents:
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+<!-- MDTOC maxdepth:6 firsth1:1 numbering:0 flatten:0 bullets:1 updateOnSave:1 -->
 
-	- [**Capstone project: The Power of Data**](#capstone-project-the-power-of-data)
-		- [Problem Statement](#problem-statement)
-		- [Target Overview](#target-overview)
-		- [Accuracy Metric](#accuracy-metric)
-		- [Data](#data)
-		- [Approach](#approach)
-		- [Findings](#findings)
-		- [Conclusion](#conclusion)
+   - [**Capstone project: The Power of Data**](#Capstone-project-The-Power-of-Data)   
+      - [Problem Statement](#Problem-Statement)   
+      - [Target Overview](#Target-Overview)   
+      - [Accuracy Metric](#Accuracy-Metric)   
+      - [Data](#Data)   
+      - [Approach](#Approach)   
+      - [Findings](#Findings)   
+      - [Conclusion](#Conclusion)   
 
-<!-- /TOC -->
+<!-- /MDTOC -->
 
 
 
@@ -70,17 +70,8 @@ The price of power consumed over a given period is determined by the **most expe
 ### Accuracy Metric
 
 In order to assess the models' accuracy, we will be scoring the models against the **R**esidual **M**ean **S**quared **E**rror (RMSE).
-$$
-RMSE = \sqrt{\sum^{n}_{i=1}{(\hat{y}_i-y_i)^2\over{n}}}
-$$
 
-$$
-where\\
-\hat{y}_i\;=\text{predicted values}\\
-y_i = \text{actual values}\\
-n = \text{number of values}
-$$
-
+![img](https://i.ibb.co/jrJ2fJ8/Code-Cogs-Eqn.gif)
 
 
 ### Data
