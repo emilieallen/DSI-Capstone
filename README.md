@@ -47,9 +47,6 @@ While statistics methods are commonly used and generally show a good performance
 
 Machine learning methods can address these limitations.
 
-The goal of this project is to explore different machine learning methods to predict hourly day-ahead prices and assess their accuracy.
-
-
 
 ### Target Overview
 
@@ -78,9 +75,9 @@ In order to assess the models' accuracy, we will be scoring the models against t
 
 Free historical data from the European Network of Transmission System Operators (ENTSOE) and Nordpool was used to create the dataset. Four years of historical forecasts and clearing prices were downloaded (2016 to 2019).
 
-Since the data had different currencies and granularities, the challenge was to convert EUR into GBP and transform all the data to an hourly granularity. Time zone difference was also taken into account.
+Since the data had different currencies and granularities, the challenge was to convert EUR into GBP and transform all the data to an hourly granularity. The time zone difference was also taken into account.
 
-It's important to highlight the fact that important features such as Gas and Coal data couldn't be obtained.
+It's important to highlight the fact that key features such as Gas and Coal data couldn't be obtained.
 
 | Name             | Description                                               |
 | ---------------- | --------------------------------------------------------- |
@@ -127,7 +124,7 @@ High performance with:
 
 **Random Forest**
 
-Supervised learning algorithm using ensemble learning method for regression. A Random Forest uses multiple decision trees and a technique called bagging that involves training each decision tree on a different data sample where sampling is done with replacement. All predictions are then averaged. This technique provides a way to reduce overfitting and works well with strong and complex models.
+A supervised learning algorithm using ensemble learning method for regression. A Random Forest uses multiple decision trees and a technique called bagging that involves training each decision tree on a different data sample where sampling is done with replacement. All predictions are then averaged. This technique provides a way to reduce overfitting and works well with strong and complex models.
 
 
 
