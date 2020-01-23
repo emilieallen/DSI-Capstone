@@ -1,4 +1,4 @@
-![powerpic](/Users/milou/Documents/powerpic.jpg)
+![img](https://i.ibb.co/fXTsPPr/powerpic.jpg)
 
 ------
 
@@ -19,15 +19,25 @@ Findings and overall performance of the best model will be discussed and analyse
 ------
 
 Table of contents:
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-[TOC]
+	- [**Capstone project: The Power of Data**](#capstone-project-the-power-of-data)
+		- [Problem Statement](#problem-statement)
+		- [Target Overview](#target-overview)
+		- [Accuracy Metric](#accuracy-metric)
+		- [Data](#data)
+		- [Approach](#approach)
+		- [Findings](#findings)
+		- [Conclusion](#conclusion)
+
+<!-- /TOC -->
 
 
 
 ------
 
 ### Problem Statement
-The dynamics of the electricity prices have increased in complexity in the past decades. Characteristics influencing prices include continous balance between demand and supply, time dependence, weather conditions and the influence of neighbouring countries. These characteristics are difficult to predict and versatile, resulting with incertainty and highly volatile electricity prices. 
+The dynamics of the electricity prices have increased in complexity in the past decades. Characteristics influencing prices include continous balance between demand and supply, time dependence, weather conditions and the influence of neighbouring countries. These characteristics are difficult to predict and versatile, resulting with incertainty and highly volatile electricity prices.
 
 ![img](https://lh6.googleusercontent.com/a5WLemCyfziJwO9dOBJ6mb167PmSq8ovXnuFA4NR0CiRb59yLmVPf83krKtCUN-sGc7_UsEBKEd0uBWwPwglHgsjdlZgqiKlZUqnH4mYRfrzvZN7p5vnr0yfT3fPCcWr7gc3GFuOfw4)
 
@@ -35,7 +45,7 @@ The increased penetration of renewable energy in the recent years has worsened t
 
 While statistics methods are commonly used and generally show a good performance, they might be limited when it comes to non-linear and high frequency data i.e hourly prices with rapid variations.
 
-Machine learning methods can address these limitations. 
+Machine learning methods can address these limitations.
 
 The goal of this project is to explore different machine learning methods to predict hourly day-ahead prices and assess their accuracy.
 
@@ -43,7 +53,7 @@ The goal of this project is to explore different machine learning methods to pre
 
 ### Target Overview
 
-The dependent variables of this project are the hourly day-ahead prices in the UK market. 
+The dependent variables of this project are the hourly day-ahead prices in the UK market.
 
 The Market Clearing Price (MCP) is established in an auction conducted once a day.
 
@@ -75,11 +85,11 @@ $$
 
 ### Data
 
-Free historical data from the European Network of Transmission System Operators (ENTSOE) and Nordpool was used to create the dataset. Four years of historical forecasts and clearing prices were downloaded (2016 to 2019). 
+Free historical data from the European Network of Transmission System Operators (ENTSOE) and Nordpool was used to create the dataset. Four years of historical forecasts and clearing prices were downloaded (2016 to 2019).
 
 Since the data had different currencies and granularities, the challenge was to convert EUR into GBP and transform all the data to an hourly granularity. Time zone difference was also taken into account.
 
-It's important to highlight the fact that important features such as Gas and Coal data couldn't be obtained. 
+It's important to highlight the fact that important features such as Gas and Coal data couldn't be obtained.
 
 | Name             | Description                                               |
 | ---------------- | --------------------------------------------------------- |
@@ -120,9 +130,9 @@ High performance with:
 
 * Seasonality
 
-* Medium size dataset 
+* Medium size dataset
 
-  
+
 
 **Random Forest**
 
@@ -134,17 +144,17 @@ Supervised learning algorithm using ensemble learning method for regression. A R
 
 Boosting is a different approach than bagging. It takes a weak base learner and tries to make it a stronger learner by retraining it on the misclassified samples.
 
-XGBoost is a decision-tree-based ensemble algorithm that uses a gradient boosting framework. 
+XGBoost is a decision-tree-based ensemble algorithm that uses a gradient boosting framework.
 
-It is one of the fastest implementations of gradient boosted trees. Instead of considering the potential loss for all possible splits to create a new branch, it looks at the distribution of features across all data points in a leaf. It then uses this information to reduce the search space of possible feature splits. 
+It is one of the fastest implementations of gradient boosted trees. Instead of considering the potential loss for all possible splits to create a new branch, it looks at the distribution of features across all data points in a leaf. It then uses this information to reduce the search space of possible feature splits.
 
 
 
 **Support Vector Regression**
 
-Support Vector Regression (SVR) is a method using a Support Vector Machines approach for regression problems. It constructs a hyperplane in a multiple dimensional space that will help predict continuous values (wx + b = 0). 
+Support Vector Regression (SVR) is a method using a Support Vector Machines approach for regression problems. It constructs a hyperplane in a multiple dimensional space that will help predict continuous values (wx + b = 0).
 
-SVR performs linear regression in feature space (high dimensional) but unlike in least square regression, the error function is the ε-insensitive loss function. 
+SVR performs linear regression in feature space (high dimensional) but unlike in least square regression, the error function is the ε-insensitive loss function.
 
 The SVR  goal is to make sure the errors do not exceed the threshold. A margin of tolerance (epsilon) is set and errors situated within a certain distance of the true value will be ignored. The best fit line is the hyperplane containing the maximum number of points.
 
@@ -161,7 +171,7 @@ https://www.researchgate.net/figure/Schematic-of-the-one-dimensional-support-vec
 
 **Multilayer Perceptron**
 
-A multilayer perceptron is one of the most common neural network architectures. 
+A multilayer perceptron is one of the most common neural network architectures.
 
 In brief, Neural networks attempt to iteratively train a set of weights that, when used together, return the most accurate predictions for a set of inputs. The model is trained using a loss function, which our model will attempt to minimise over iterations.
 
@@ -171,38 +181,38 @@ By increasing the volume of data in the network, it adjusts the weights based on
 
 
 
-![image-20200121130705378](/Users/milou/Library/Application Support/typora-user-images/image-20200121130705378.png)
+![image-20200121130705378](https://i.ibb.co/3rN6HgS/neuralnet.png)
 
 
 ### Findings
 
-Preliminary findings from the Explanatory Data Analysis highlighted insignificant correlation between the UK prices and fundamental variables such as supply and demand. The correlation with the prices in the neighbouring countries wasn't particularly strong. 
+Preliminary findings from the Explanatory Data Analysis highlighted insignificant correlation between the UK prices and fundamental variables such as supply and demand. The correlation with the prices in the neighbouring countries wasn't particularly strong.
 
-![image-20200121140646449](/Users/milou/Library/Application Support/typora-user-images/image-20200121140646449.png)
+![image-20200121140646449](https://i.ibb.co/ySYBgWH/correlation.png)
 
 Since there is a lot of seasonality within the traget variable, we looked at the autocorrelation with different lags. The highest scores were for past prices at a similar hour.
 
-![image-20200121141144642](/Users/milou/Library/Application Support/typora-user-images/image-20200121141144642.png)
+![image-20200121141144642](https://i.ibb.co/gJhF320/autocorrelation.png)
 
-The relationship bewteen UK prices and the neighbours was investigated. The correlations between the UK prices at T and the French/Dutch prices at different lags were assessed. 
+The relationship bewteen UK prices and the neighbours was investigated. The correlations between the UK prices at T and the French/Dutch prices at different lags were assessed.
 
-Lags with the highest correlation scores were added as additional features. 
+Lags with the highest correlation scores were added as additional features.
 
 Features selection was performed and all the above models were optimised.
 
 The below graph shows the most important features, obtained by using a Recursive Feature Elimination (RFE) with a Random Forest estimator.
 
-![image-20200121153941449](/Users/milou/Library/Application Support/typora-user-images/image-20200121153941449.png)
+![image-20200121153941449](https://i.ibb.co/dkYRwh2/feature-importance.png)
 
-Out of all the models selected, the Random Forest model performed best. It has the highest RMSE and R2 scores and a decent cross validation score. 
+Out of all the models selected, the Random Forest model performed best. It has the highest RMSE and R2 scores and a decent cross validation score.
 
-![image-20200121154613300](/Users/milou/Library/Application Support/typora-user-images/image-20200121154613300.png)
+![image-20200121154613300](https://i.ibb.co/vJ1rHM4/newplot.png)
 
 The model is also more accurate than the baseline - hourly averaged price.
 
 
 
-![image-20200121155833858](/Users/milou/Library/Application Support/typora-user-images/image-20200121155833858.png)
+![image-20200121155833858](https://i.ibb.co/Jzf0Mh5/predictions.png)
 
 
 
@@ -216,5 +226,4 @@ There are limitations to consider regarding the data. Only free data was used an
 
 The above considerations must be taken into account in the judgment of the model's performance. Using more reliable data and adding variables such as gas and coal prices would probably improve the accuracy of the model.
 
-Other machine learning techniques can also be explored. 
-
+Other machine learning techniques can also be explored.
