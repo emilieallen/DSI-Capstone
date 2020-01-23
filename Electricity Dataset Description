@@ -1,0 +1,48 @@
+Data Sources:
+
+    * UK DA prices: https://www.nordpoolgroup.com/Market-data1/GB/Auction-prices/UK/Hourly
+    * FR & NL DA prices: https://transparency.entsoe.eu
+    * All countries DA Hourly Load forecasts: https://transparency.entsoe.eu
+    * All countries DA Hourly generation forecasts: https://transparency.entsoe.eu
+    * FX EURGBP: https://www.xe.com
+
+Period: From 2016-01-01 to 2019-11-14 - 33936 entries
+
+Data granularity: Hourly 
+
+Data description:
+
+    * date: datetime yyyy-mm-dd hh:mm:ss
+    * uk_time: Hour UK time zone
+    * cet_time: Hour CET 
+    * da_uk_price: Day-ahead UK hourly prices (£/MWh)
+    * da_fr_price: Day-ahead French hourly prices (£/MWh)
+    * da_nl_price: Day-ahead Dutch hourly prices (£/MWh)
+    * da_load_fr: French demand day-ahead hourly forecasts 
+    * da_load_nl: Dutch demand day-ahead hourly forecasts 
+    * da_load_uk: UK demand day-ahead hourly forecasts 
+    * fr_generation: French aggregated generation day-ahead hourly forecasts
+    * nl_generation: Dutch aggregated generation day-ahead hourly forecasts
+    * uk_generation: UK aggregated generation day-ahead hourly forecasts
+    * fr_solar: French solar generation day-ahead hourly forecasts
+    * fr_wind_onshore: French onshore wind generation day-ahead hourly forecasts
+    * nl_solar: Dutch solar generation day-ahead hourly forecasts 
+    * nl_wind_offshore: Dutch offshore wind generation day-ahead hourly forecasts
+    * nl_wind_onshore: Dutch onshore wind generation day-ahead hourly forecasts
+    * uk_solar: UK solar generation day-ahead hourly forecasts
+    * uk_wind_offshore: UK offshore wind generation day-ahead hourly forecasts  
+    * uk_wind_onshore: UK onshore wind generation day-ahead hourly forecasts
+    * uk_bh: UK bank holiday (True if BH else False)
+    * nl_bh: NL bank holiday (True if BH else False)
+    * fr_bh: FR bank holiday (True if BH else False)
+    * true_date: Date as object
+    
+Data cleaning:
+    
+    * Missing values:
+        * fillna with mean
+        * ffill for missing values <2 per day
+        * NaN dropped for March clock change hours
+        
+    * Granularity differences:
+        * groupby - sum()
