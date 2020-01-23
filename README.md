@@ -1,4 +1,4 @@
-![powerpic](https://ibb.co/6yqkffD)
+![powerpic](/Users/milou/Documents/powerpic.jpg)
 
 ------
 
@@ -20,7 +20,7 @@ Findings and overall performance of the best model will be discussed and analyse
 
 Table of contents:
 
-[toc]
+[TOC]
 
 
 
