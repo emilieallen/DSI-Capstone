@@ -210,7 +210,7 @@ Optimising the model helped minimising the RMSE scores. However, a RMSE of 5.69 
 
 High spikes failed to be accurately captured, which was part of our goal.
 
-There are limitations to consider regarding the data. Only free data was used and the quality cannot be fully trusted. ENSTOE gathers data submitted by all market participants, but the validity of this data can only be verified to some extend. Updates are not performed when a deadline has been missed or when there has been a revision, resulting in missing or incorrect data.  Moreover, important features were missing as the data couldn't be obtained for free.
+There are limitations to consider regarding the data. Only free data was used and the quality cannot be fully trusted. ENTSOE gathers data submitted by all market participants, but the validity of this data can only be verified to some extend. Updates are not performed when a deadline has been missed or when there has been a revision, resulting in missing or incorrect data.  Moreover, important features were missing as the data couldn't be obtained for free.
 
 The above considerations must be taken into account in the judgment of the model's performance. Using more reliable data and adding variables such as gas and coal prices would probably improve the accuracy of the model.
 
